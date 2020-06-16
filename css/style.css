@@ -1,0 +1,87 @@
+﻿@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
+
+/*  Reset CSS  */
+* { margin:0;  padding:0;}
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#555; }
+img { border:0;}
+body { width:100%; height: 23000px; font-family:Orbitron; font-size:12px; } 
+
+/* 배경 */
+.bg{position: fixed; width: 100%; height: 100%; top:0; left: 0; background:url(../img/bg.jpg) no-repeat center top; background-size: cover;}
+/* 로고 */
+h1 {position: fixed; top:35px; left:90px; z-index: 2; font-size: 100px;}
+h1 img{width:150px}
+/* gnb 네비 */
+.gnb{position:fixed; top:50px; right:250px; z-index: 2;}
+.gnb li{float:left; margin-left: 50px;}
+.gnb li a{font-size: 14px; font-weight: bold; color: #fff; transform: scale(1); opacity: 0.5; transition: .5s;}
+.gnb li a:hover{transform: scale(1.5); opacity: 1;}
+/* sns */
+.sns{position: fixed; top: 50px; right: 50px; z-index: 2;}
+.sns li{float: left; margin-left: 30px}
+.sns li .fa{font-size: 18px; color:#fff; transform: scale(1); opacity: 0.5; transition: .5s;}
+.sns li .fa:hover{ transform: scale(1.5); opacity: 1;}
+/* 스크롤 네이게이션 */
+.scrollNavi{ position: fixed; left: 100px; top: 300px; z-index:2;}
+.scrollNavi li{position: relative; width: 150px; height: 35px;font-size: 12px; color: #Fff; text-align: center; perspective: 400px; cursor: pointer; margin-bottom: 20px;}
+.scrollNavi li em{position: absolute; top: 8px; left: 20px; font-size: 14px; font-weight: bold; color: #fff; text-shadow: 1px 1px 1px #000;}
+.scrollNavi li span{display: block; width: 3%; height: 100%; position: absolute; transform: skewX(-30deg); box-shadow: 1px 1px 1px #000;}
+
+.scrollNavi li.on span{ width:100%;}
+.scrollNavi li:nth-child(1) span{background: #fffb02;}
+.scrollNavi li:nth-child(2) span{background: #eb2f06;}
+.scrollNavi li:nth-child(3) span{background: #30336b;}
+.scrollNavi li:nth-child(4) span{background: #535c68;}
+.scrollNavi li:nth-child(5) span{background: #c7ecee;}
+
+.copyright{position: fixed; bottom: 20px; right:30px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #555;}
+
+section{position: fixed; width:1200px; height: 700px; left:50%; top:50%; margin-left: -600px; margin-top: -350px; perspective: 2300px; z-index: 1;}
+section>article{width: 1200px; height: 700px; position: absolute; top: 0; left:0; opacity: 0.5; z-index: 8;}
+section>article.on{opacity: 1; z-index: 9;}
+section>article:nth-child(1){transform: translateZ(0);}
+section>article:nth-child(2){transform: translateZ(-5000px);}
+section>article:nth-child(3){transform: translateZ(-10000px);}
+section>article:nth-child(4){transform: translateZ(-15000px);}
+section>article:nth-child(5){transform: translateZ(-20000px);}
+
+section>article>p{position: absolute; width: 450px; padding: 30px 60px; color: #fff; opacity: 1;}
+section>article>p>span{font-family: orbitron; font-size: 60px; letter-spacing: 0; line-height: 1.5;}
+section>article>img{position: absolute;}
+
+/* 첫번째 박스 콘텐츠 */
+
+section>article:nth-child(1) p {top: 200px; right: -100px;}
+section>article:nth-child(1) p span {color:#fffb02}
+.obj11 {bottom: -100px; left:-190px;}
+.obj13 {bottom: 20px; left:-170px;}
+
+/* 2번째 박스 콘텐츠 */
+
+section>article:nth-child(2) p {bottom: 350px; left:100px;}
+section>article:nth-child(2) p span {color:#eb2f06}
+.obj21 {bottom: -20px; right: 120px;}
+.obj22 {bottom: -80px; right:-250px;}
+
+/* 3번째 박스 콘텐츠 */
+
+section>article:nth-child(3) p {bottom: 300px; right: -100px;}
+section>article:nth-child(3) p span {color:#30336b}
+.obj31 {bottom: 120px; right:0;}
+.obj32 {bottom: -50px; left:-50px;}
+
+/* 4번째 박스 콘텐츠 */
+
+section>article:nth-child(4) p {bottom: 350px; left:100px;}
+section>article:nth-child(4) p span {color:#535c68}
+.obj41 {top: -230px; left:400px;}
+.obj43 {top: 160px; right:-160px;}
+
+/* 첫번째 박스 콘텐츠 */
+
+section>article:nth-child(5) p {bottom: 230px; right: -350px;}
+section>article:nth-child(5) p span {color:#c7ecee}
+.obj51 {bottom: -90px; left:-100px;}
+.obj53 {bottom: 80px; left: -200px;}
